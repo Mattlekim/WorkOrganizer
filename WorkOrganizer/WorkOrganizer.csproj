@@ -46,6 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\ActionState.cs" />
+    <Compile Include="Data\Job.cs" />
+    <Compile Include="Data\Payment.cs" />
+    <Compile Include="Data\PaymentType.cs" />
     <Compile Include="Data\RepeateJob.cs" />
     <Compile Include="Data\Street.cs" />
     <Compile Include="Form1.cs">
