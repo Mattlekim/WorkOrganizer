@@ -15,16 +15,6 @@ namespace WorkOrganizer.Data
         public string Notes;
 
         /// <summary>
-        /// Weather we repeate the job or not
-        /// </summary>
-        public Repeatable RepeateJob;
-
-        /// <summary>
-        /// frequence in weeks
-        /// </summary>
-        public int Frequence;
-
-        /// <summary>
         /// the house Name / number
         /// </summary>
         public string HouseName;
@@ -33,5 +23,8 @@ namespace WorkOrganizer.Data
         /// this links it to the street it is on
         /// </summary>
         public int StreetId;
+
+        public List<Job> Jobs { get; private set; }
+        
     }
 }
