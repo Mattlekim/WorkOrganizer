@@ -70,6 +70,11 @@ namespace WorkOrganizer.Data
             return false;
         }
 
+        public int GetIndex()
+        {
+            return Data.IndexOf(Value);
+        }
+
         public override string ToString()
         {
             if (IsEmpty)
