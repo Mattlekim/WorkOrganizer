@@ -39,8 +39,8 @@
             this.cb_Street = new System.Windows.Forms.ComboBox();
             this.bnt_Add = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bnt_Cancel = new System.Windows.Forms.Button();
+            this.txt_Customer_Notes = new System.Windows.Forms.TextBox();
+            this.bnt_Clear = new System.Windows.Forms.Button();
             this.bnt_Save = new System.Windows.Forms.Button();
             this.gb_Add_Job = new System.Windows.Forms.GroupBox();
             this.lb_Job_Types = new System.Windows.Forms.ListBox();
@@ -158,31 +158,31 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Notes";
             // 
-            // textBox2
+            // txt_Customer_Notes
             // 
-            this.textBox2.Location = new System.Drawing.Point(53, 67);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(278, 77);
-            this.textBox2.TabIndex = 16;
+            this.txt_Customer_Notes.Location = new System.Drawing.Point(53, 67);
+            this.txt_Customer_Notes.Multiline = true;
+            this.txt_Customer_Notes.Name = "txt_Customer_Notes";
+            this.txt_Customer_Notes.Size = new System.Drawing.Size(278, 77);
+            this.txt_Customer_Notes.TabIndex = 16;
             // 
-            // bnt_Cancel
+            // bnt_Clear
             // 
-            this.bnt_Cancel.Location = new System.Drawing.Point(230, 367);
-            this.bnt_Cancel.Name = "bnt_Cancel";
-            this.bnt_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.bnt_Cancel.TabIndex = 17;
-            this.bnt_Cancel.Text = "Cancel";
-            this.bnt_Cancel.UseVisualStyleBackColor = true;
-            this.bnt_Cancel.Click += new System.EventHandler(this.bnt_Cancel_Click);
+            this.bnt_Clear.Location = new System.Drawing.Point(224, 367);
+            this.bnt_Clear.Name = "bnt_Clear";
+            this.bnt_Clear.Size = new System.Drawing.Size(104, 23);
+            this.bnt_Clear.TabIndex = 17;
+            this.bnt_Clear.Text = "Clear";
+            this.bnt_Clear.UseVisualStyleBackColor = true;
+            this.bnt_Clear.Click += new System.EventHandler(this.bnt_Cancel_Click);
             // 
             // bnt_Save
             // 
             this.bnt_Save.Location = new System.Drawing.Point(15, 367);
             this.bnt_Save.Name = "bnt_Save";
-            this.bnt_Save.Size = new System.Drawing.Size(75, 23);
+            this.bnt_Save.Size = new System.Drawing.Size(101, 23);
             this.bnt_Save.TabIndex = 18;
-            this.bnt_Save.Text = "Save";
+            this.bnt_Save.Text = "Add Customer";
             this.bnt_Save.UseVisualStyleBackColor = true;
             this.bnt_Save.Click += new System.EventHandler(this.bnt_Save_Customer_Click);
             // 
@@ -200,7 +200,7 @@
             this.gb_Add_Job.Controls.Add(this.label6);
             this.gb_Add_Job.Controls.Add(this.txt_Frequncy);
             this.gb_Add_Job.Controls.Add(this.txt_Price);
-            this.gb_Add_Job.Location = new System.Drawing.Point(380, 24);
+            this.gb_Add_Job.Location = new System.Drawing.Point(380, 12);
             this.gb_Add_Job.Name = "gb_Add_Job";
             this.gb_Add_Job.Size = new System.Drawing.Size(271, 405);
             this.gb_Add_Job.TabIndex = 21;
@@ -336,16 +336,16 @@
             this.gb_Customer.Controls.Add(this.label1);
             this.gb_Customer.Controls.Add(this.label2);
             this.gb_Customer.Controls.Add(this.bnt_Save);
-            this.gb_Customer.Controls.Add(this.bnt_Cancel);
+            this.gb_Customer.Controls.Add(this.bnt_Clear);
             this.gb_Customer.Controls.Add(this.txt_SName);
-            this.gb_Customer.Controls.Add(this.textBox2);
+            this.gb_Customer.Controls.Add(this.txt_Customer_Notes);
             this.gb_Customer.Controls.Add(this.label7);
-            this.gb_Customer.Location = new System.Drawing.Point(12, 24);
+            this.gb_Customer.Location = new System.Drawing.Point(12, 12);
             this.gb_Customer.Name = "gb_Customer";
             this.gb_Customer.Size = new System.Drawing.Size(337, 405);
             this.gb_Customer.TabIndex = 22;
             this.gb_Customer.TabStop = false;
-            this.gb_Customer.Text = "groupBox1";
+            this.gb_Customer.Text = "Customer";
             // 
             // groupBox1
             // 
@@ -355,7 +355,7 @@
             this.groupBox1.Size = new System.Drawing.Size(322, 111);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Jobs";
             // 
             // lv_Customer_Jobs
             // 
@@ -415,14 +415,14 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -455,7 +455,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 817);
+            this.ClientSize = new System.Drawing.Size(662, 434);
             this.Controls.Add(this.gb_Customer);
             this.Controls.Add(this.gb_Add_Job);
             this.Name = "frm_New_Customer";
@@ -486,8 +486,8 @@
         private System.Windows.Forms.ComboBox cb_Street;
         private System.Windows.Forms.Button bnt_Add;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button bnt_Cancel;
+        private System.Windows.Forms.TextBox txt_Customer_Notes;
+        private System.Windows.Forms.Button bnt_Clear;
         private System.Windows.Forms.Button bnt_Save;
         private System.Windows.Forms.GroupBox gb_Add_Job;
         private System.Windows.Forms.Label label6;

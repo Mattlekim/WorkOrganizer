@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using WorkOrganizer.Data;
+using WorkOrganizer.Data.DataBase;
 
 namespace WorkOrganizer
 {
@@ -25,7 +26,18 @@ namespace WorkOrganizer
 
         private void bnt_Cancel_Click(object sender, EventArgs e)
         {
-            Close();
+            txt_FName.Clear();
+            txt_Frequncy.Text = "4";
+            txt_HouseNo.Clear();
+            txt_Job_Notes.Clear();
+            txt_Price.Clear();
+            txt_SName.Clear();
+            cb_Repeat.SelectedIndex = 0;
+            lv_Customer_Jobs.Clear();
+            lb_Job_Types.SelectedIndex = 0;
+            txt_Customer_Notes.Clear();
+            cb_Street.SelectedIndex = -1;
+            cb_Street.Text = string.Empty;
         }
 
         private void frm_New_Customer_FormClosing(object sender, FormClosingEventArgs e)
@@ -41,9 +53,11 @@ namespace WorkOrganizer
             lv_Customer_Jobs.Items.Clear();
             //load config file
             Config.Load();
+            
 
             lb_Job_Types.Items.Clear();
             lb_Job_Types.Items.AddRange(JobType.GetData().ToArray());
+            lb_Job_Types.SelectedIndex = 0;
 
             Data.Street.SetUpDebugData();
 
@@ -60,7 +74,7 @@ namespace WorkOrganizer
         //here we save the customer
         private void bnt_Save_Customer_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -179,7 +193,8 @@ namespace WorkOrganizer
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            _newCustomer.Jobs.Remove(lv_Customer_Jobs.SelectedItems[0].Tag as Job);
+            UpdateCustomerJobs();
         }
     }
 }
