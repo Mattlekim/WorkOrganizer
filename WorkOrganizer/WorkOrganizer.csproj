@@ -48,6 +48,8 @@
     <Compile Include="Config.cs" />
     <Compile Include="Data\Customer.cs" />
     <Compile Include="Data\ActionState.cs" />
+    <Compile Include="Data\DataBase\CustomerDataBase.cs" />
+    <Compile Include="Data\DataBase\DataBase.cs" />
     <Compile Include="Data\Job.cs" />
     <Compile Include="Data\JobType.cs" />
     <Compile Include="Data\Payment.cs" />
