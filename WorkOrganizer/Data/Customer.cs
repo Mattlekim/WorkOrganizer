@@ -24,7 +24,7 @@ namespace WorkOrganizer.Data
         /// </summary>
         public int StreetId;
 
-        public List<Job> Jobs { get; private set; }
-        
+        public List<Job> Jobs { get; private set; } = new List<Job>();
+     
     }
 }
